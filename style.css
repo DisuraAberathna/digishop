@@ -1,0 +1,257 @@
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-signup {
+    background-image: url("resource/background.jpg");
+}
+
+.background-1 {
+    background-image: radial-gradient(circle,rgb(255, 255, 255),rgb(163, 221, 255));
+}
+
+.background-2 {
+    background-image: url("resource/bg-2.jpg");
+}
+
+.background-3 {
+    background-image: url("resource/bg-3.jpg");
+}
+
+.background-main {
+    background-image: url("resource/bg-main.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    background-image: url("resource/logo.png");
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-img {
+    height: 560px;
+    background-image: url("resource/empty.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: "Zenloop";
+    src: url("font/ZenLoop-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url("font/PTSansNarrow-Regular.ttf");
+}
+
+* {
+    font-family: "PTSans";
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.title-1 {
+    font-family: "Zenloop";
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.title-2 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    animation: vanish 2s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.t {
+    position: relative;
+}
+
+.t::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+    border-radius: 100px;
+}
+
+.t:hover::after {
+    width: 100%;
+}
+
+.poster-img-1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.poster-caption-1 {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.poster-title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.poster-txt {
+    font-size: 24px;
+}
+
+.poster-caption-2 {
+    margin-bottom: 55px;
+    margin-right: 130px;
+}
+
+.top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+}
+
+.pm {
+    height: 65px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pm-1 {
+    background-image: url("resource/payment_methods/paypal_img.png");
+}
+
+.pm-2 {
+    background-image: url("resource/payment_methods/visa_img.png");
+}
+
+.pm-3 {
+    background-image: url("resource/payment_methods/mastercard_img.png");
+}
+
+.pm-4 {
+    background-image: url("resource/payment_methods/american_express_img.png");
+}
+
+.singleProduct {
+    padding-top: 65px;
+    padding-bottom: 145px;
+    padding: 20px;
+}
+
+.product-qty {
+    width: 100px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+.qty-buttons {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+}
+
+.qty-inc,
+.qty-dec {
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.icon {
+    color: gray;
+    transition-duration: 1000ms;
+}
+
+.icon:hover {
+    color: black;
+    transition-duration: 1000ms;
+}
+
+.qty-inc {
+    border-top-right-radius: 5px;
+}
+
+.qty-dec {
+    border-bottom-right-radius: 5px;
+}
+
+.emptyView {
+    height: 400px;
+    background-image: url("resource/watchlistEmptyView.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.message_box,
+.chat_box {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.box {
+    transition-duration: 500ms;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.firstPalce {
+    height: 100px;
+    background-image: url("resource/firstplace.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.str{
+    transition-duration: 500ms;
+    color: #6c757d;
+    }
+.str:hover{
+    transition-duration: 500ms;
+    color: #ffc107;
+}
