@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "connection.php";
+require "./connection.php";
 
 ?>
 
@@ -60,7 +60,7 @@ if (isset($_GET["email"])) {
             <!-- Spinner End -->
 
             <div class="content">
-                <?php include "adminHeader.php" ?>
+                <?php include "./component/admin./component/header.php" ?>
 
                 <div class="container-fluid background background-1">
                     <div class="row">
@@ -344,7 +344,7 @@ if (isset($_GET["email"])) {
                             header("Location:./home.php");
                         }
 
-                        include "footer.php";
+                        include "./component/footer.php";
 
                         ?>
 

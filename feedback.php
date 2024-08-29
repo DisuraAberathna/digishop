@@ -20,20 +20,20 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row">
 
             <?php
 
-            require "connection.php";
+            require "./connection.php";
 
             if (isset($_GET["id"])) {
 
                 $pid = $_GET["id"];
 
-                include "header.php";
+                include "./component/header.php";
 
             ?>
 
@@ -228,7 +228,7 @@
 
             <?php
 
-                include "footer.php";
+                include "./component/footer.php";
             } else {
 
             ?>
@@ -264,7 +264,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
     <script>

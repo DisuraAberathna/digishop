@@ -18,7 +18,7 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <?php
 
@@ -151,7 +151,7 @@
     ?>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 
 </body>
 

@@ -20,7 +20,7 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid vh-100 d-flex justify-content-center background background-signup">
         <div class="row align-content-center">
@@ -84,7 +84,7 @@
 
                                     <?php
 
-                                    require "connection.php";
+                                    require "./connection.php";
 
                                     $gender_rs = Database::search("SELECT * FROM `gender`");
                                     $gender_num = $gender_rs->num_rows;
@@ -225,7 +225,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.js"></script>
+    <script src="./js/bootstrap.js"></script>
 
 </body>
 

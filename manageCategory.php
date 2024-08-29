@@ -26,7 +26,7 @@
     <?php
 
     session_start();
-    require "connection.php";
+    require "./connection.php";
 
     if (isset($_SESSION["admin"])) {
 
@@ -39,7 +39,7 @@
     <div class="container-fluid position-relative d-flex p-0">
         <div class="content">
 
-            <?php include "adminHeader.php"; ?>
+            <?php include "./component/adminheader.php"; ?>
 
             <div class="container-fluid background background-1">
                 <div class="row">
@@ -406,7 +406,7 @@
 
                     <hr class="border border-2 border-dark mt-3 mb-5" />
 
-                    <?php include "footer.php"; ?>
+                    <?php include "./component/footer.php"; ?>
 
                     <!-- Add New Cateory -->
                     <div class="modal fade" id="addCategory" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -569,7 +569,7 @@
         </div>
     </div>
 
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>

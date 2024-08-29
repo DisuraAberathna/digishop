@@ -20,15 +20,15 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row">
 
             <?php
 
-            require "connection.php";
-            include "header.php";
+            require "./connection.php";
+            include "./component/header.php";
 
             if (isset($_SESSION["user"])) {
 
@@ -194,7 +194,7 @@
                                                 } else {
                                                     $delivery_rs = Database::search("SELECT SUM(`delivery_fee_other`) FROM `product` INNER JOIN `invoice` ON `product`.`id`=`invoice`.`product_id` WHERE `order_id`='" . $oid . "'");
                                                     $delivery_data = $delivery_rs->fetch_assoc();
-                                                    $delivery = implode(" ", $deliveryl_data);
+                                                    $delivery = implode(" ", $delivery_data);
                                                 }
                                                 $total_rs = Database::search("SELECT SUM(`total`) FROM `invoice` WHERE `order_id`='" . $oid . "'");
                                                 $total_data = $total_rs->fetch_assoc();
@@ -259,7 +259,7 @@
 
             }
 
-            include "footer.php";
+            include "./component/footer.php";
 
             ?>
 
@@ -267,7 +267,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 
 </body>

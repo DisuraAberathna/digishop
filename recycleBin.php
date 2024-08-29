@@ -26,7 +26,7 @@
             <?php
 
             session_start();
-            require "connection.php";
+            require "./connection.php";
 
             if (isset($_SESSION["user"])) {
 
@@ -264,7 +264,7 @@
                         </div>
                     </div>
 
-                    <?php include "footer.php"; ?>
+                    <?php include "./component/footer.php"; ?>
 
                 <?php
 
@@ -306,7 +306,7 @@
         </div>
     </div>
 
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 
 </body>

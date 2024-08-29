@@ -27,7 +27,7 @@
     <?php
 
     session_start();
-    require "connection.php";
+    require "./connection.php";
 
     if (isset($_SESSION["admin"])) {
 
@@ -39,8 +39,8 @@
 
     <div class="container-fluid position-relative d-flex p-0">
         <div class="content">
-
-            <?php include "adminHeader.php"; ?>
+            
+            <?php include "./component/adminheader.php"; ?>
 
             <div class="container-fluid background background-1">
                 <div class="row">
@@ -244,7 +244,7 @@
 
                     <hr class="border border-2 border-dark mb-5 mt-3" />
 
-                    <?php require "footer.php"; ?>
+                    <?php require "./component/footer.php"; ?>
 
                 </div>
             </div>
@@ -252,7 +252,7 @@
         </div>
     </div>
 
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>

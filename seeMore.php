@@ -15,7 +15,7 @@
 
     <?php
 
-    require "connection.php";
+    require "./connection.php";
 
     $brand_rs = Database::search("SELECT * FROM `brand` WHERE `id`='" . $_GET["id"] . "'AND `status_id`='1'");
     $brand_data = $brand_rs->fetch_assoc();
@@ -33,7 +33,7 @@
 
     <div class="container-fluid background background-1">
         <div class="row">
-            <?php include "header.php"; ?>
+            <?php include "./component/header.php"; ?>
 
             <div class="col-12 mt-3 mb-3">
                 <a href="#" class="text-decoration-none link-dark fs-3 fw-bold"><?php echo  $category_data["category_name"] . " - " . $brand_data["brand_name"]; ?> Products</a>
@@ -276,13 +276,13 @@
                 </div>
             </div>
 
-            <?php include "footer.php"; ?>
+            <?php include "./component/footer.php"; ?>
 
         </div>
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 
 </body>
 

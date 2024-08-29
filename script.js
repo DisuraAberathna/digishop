@@ -76,7 +76,7 @@ function signUp() {
     }
   };
 
-  request.open("POST", "signUpProcess.php", true);
+  request.open("POST", "./process/signUpProcess.php", true);
   request.send(form);
 }
 
@@ -105,7 +105,7 @@ function signIn() {
     }
   };
 
-  request.open("POST", "signInProcess.php", true);
+  request.open("POST", "./process/signInProcess.php", true);
   request.send(form);
 }
 
@@ -136,7 +136,7 @@ function forgotPassword() {
     }
   };
 
-  request.open("GET", "forgotPasswordProcess.php?e=" + e.value, true);
+  request.open("GET", "./process/forgotPasswordProcess.php?e=" + e.value, true);
   request.send();
 }
 
@@ -223,7 +223,7 @@ function resetPassword() {
     }
   };
 
-  request.open("POST", "resetPasswordProcess.php", true);
+  request.open("POST", "./process/resetPasswordProcess.php", true);
   request.send(form);
 }
 
@@ -242,7 +242,7 @@ function signout() {
     }
   };
 
-  request.open("GET", "signOutProcess.php", true);
+  request.open("GET", "./process/signOutProcess.php", true);
   request.send();
 }
 
@@ -277,7 +277,7 @@ function load_district() {
     }
   };
 
-  request.open("GET", "loadDistrict.php?p=" + province, true);
+  request.open("GET", "./process/loadDistrict.php?p=" + province, true);
   request.send();
 }
 
@@ -294,7 +294,7 @@ function load_city() {
     }
   };
 
-  request.open("GET", "loadCity.php?d=" + district, true);
+  request.open("GET", "./process/loadCity.php?d=" + district, true);
   request.send();
 }
 
@@ -344,7 +344,7 @@ function saveUserDetails() {
     }
   };
 
-  request.open("POST", "saveUserDetailsProcess.php", true);
+  request.open("POST", "./process/saveUserDetailsProcess.php", true);
   request.send(form);
 }
 
@@ -399,7 +399,7 @@ function deleteProfileImage(email) {
     }
   };
 
-  request.open("POST", "deleteProfileImageProcess.php", true);
+  request.open("POST", "./process/deleteProfileImageProcess.php", true);
   request.send(form);
 }
 
@@ -446,7 +446,7 @@ function saveImage() {
     }
   };
 
-  request.open("POST", "saveProfileImageProcess.php", true);
+  request.open("POST", "./process/saveProfileImageProcess.php", true);
   request.send(form);
 }
 
@@ -492,7 +492,7 @@ function saveUserAddress() {
     }
   };
 
-  request.open("POST", "saveUserAddressProcess.php", true);
+  request.open("POST", "./process/saveUserAddressProcess.php", true);
   request.send(form);
 }
 
@@ -647,7 +647,7 @@ function load_brand() {
     }
   };
 
-  request.open("GET", "loadBrand.php?c=" + category, true);
+  request.open("GET", "./process/loadBrand.php?c=" + category, true);
   request.send();
 }
 
@@ -664,7 +664,7 @@ function load_model() {
     }
   };
 
-  request.open("GET", "loadModel.php?b=" + brand, true);
+  request.open("GET", "./process/loadModel.php?b=" + brand, true);
   request.send();
 }
 
@@ -754,7 +754,7 @@ function addProduct() {
     }
   };
 
-  request.open("POST", "addProductProcess.php", true);
+  request.open("POST", "./process/addProductProcess.php", true);
   request.send(form);
 }
 
@@ -791,7 +791,7 @@ function changeStatus(id) {
     }
   };
 
-  request.open("GET", "changeStatusProcess.php?id=" + pid, true);
+  request.open("GET", "./process/changeStatusProcess.php?id=" + pid, true);
   request.send();
 }
 
@@ -810,7 +810,7 @@ function sellersProductSearch(x) {
 
   request.open(
     "GET",
-    "sellersProductSearchProcess.php?s=" + search + "&page=" + x,
+    "./process/sellersProductSearchProcess.php?s=" + search + "&page=" + x,
     true
   );
   request.send();
@@ -840,7 +840,11 @@ function removeFromSellersProduct(id) {
     }
   };
 
-  request.open("GET", "removeFromSellersProductProcess.php?id=" + id, true);
+  request.open(
+    "GET",
+    "./process/removeFromSellersProductProcess.php?id=" + id,
+    true
+  );
   request.send();
 }
 
@@ -877,7 +881,7 @@ function sort_1(x) {
     }
   };
 
-  request.open("POST", "sortProcess.php", true);
+  request.open("POST", "./process/sortProcess.php", true);
   request.send(form);
 }
 
@@ -899,7 +903,7 @@ function sendId(id) {
     }
   };
 
-  request.open("GET", "sendProductProcess.php?id=" + id, true);
+  request.open("GET", "./process/sendProductProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -955,7 +959,7 @@ function updateProduct() {
     }
   };
 
-  request.open("POST", "updateProdutProcess.php", true);
+  request.open("POST", "./process/updateProdutProcess.php", true);
   request.send(form);
 }
 
@@ -978,7 +982,7 @@ function basicSearch(x) {
     }
   };
 
-  request.open("POST", "basicSearchProcess.php", true);
+  request.open("POST", "./process/basicSearchProcess.php", true);
   request.send(form);
 }
 
@@ -1006,7 +1010,7 @@ function addToWatchlist(id) {
     }
   };
 
-  request.open("GET", "addToWatchlistProcess.php?id=" + id, true);
+  request.open("GET", "./process/addToWatchlistProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1028,7 +1032,7 @@ function removeFromWatchlist(id) {
     }
   };
 
-  request.open("GET", "removeWatchlistProcess.php?id=" + id, true);
+  request.open("GET", "./process/removeWatchlistProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1097,7 +1101,7 @@ function restoreProduct(id) {
     }
   };
 
-  request.open("GET", "restoreProductProcess.php?id=" + id, true);
+  request.open("GET", "./process/restoreProductProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1124,7 +1128,11 @@ function deleteForever(id) {
     }
   };
 
-  request.open("GET", "productDeleteForeverProcess.php?id=" + id, true);
+  request.open(
+    "GET",
+    "./process/productDeleteForeverProcess.php?id=" + id,
+    true
+  );
   request.send();
 }
 
@@ -1157,7 +1165,7 @@ function addToCart(id) {
     }
   };
 
-  request.open("GET", "addToCartProcess.php?id=" + id, true);
+  request.open("GET", "./process/addToCartProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1187,7 +1195,7 @@ function removeFromCart(id) {
     }
   };
 
-  request.open("GET", "deleteFromCartProcess.php?id=" + id, true);
+  request.open("GET", "./process/deleteFromCartProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1222,88 +1230,9 @@ function updateCartQty(id, pqty) {
 
   request.open(
     "GET",
-    "updateCartQtyProcess.php?id=" + id + "&qty=" + qty,
+    "./process/updateCartQtyProcess.php?id=" + id + "&qty=" + qty,
     true
   );
-  request.send();
-}
-
-function openPaymentModel() {
-  var request = new XMLHttpRequest();
-
-  request.onreadystatechange = function () {
-    if (request.readyState == 4) {
-      var text = request.responseText;
-
-      var alertModal = document.getElementById("alertModal");
-      hm = new bootstrap.Modal(alertModal);
-
-      if (text == "1") {
-        document.getElementById("msg").innerHTML =
-          "  Please Log In or Sign Up !!!";
-        hm.show();
-      } else if (text == "2") {
-        document.getElementById("msg").innerHTML =
-          "  Please Update Your Profile First !!!";
-        hm.show();
-      } else if (text != 1 && text != 2) {
-        var id = document.getElementById("id").value;
-        var qty = document.getElementById("qty_input").value;
-        var title = document.getElementById("title").value;
-        var price = document.getElementById("price").value;
-        var deliveryFee = document.getElementById("deliveryFee").value;
-        var amount = parseInt(price) * parseInt(qty) + parseInt(deliveryFee);
-
-        window.location =
-          "paymentGate.php?id=" +
-          id +
-          "&qty=" +
-          qty +
-          "&title=" +
-          title +
-          "&amount=" +
-          amount;
-      } else {
-        alert(text);
-      }
-    }
-  };
-
-  request.open("GET", "verifyToPayment.php", true);
-  request.send();
-}
-
-var pgm;
-
-function openCheckoutModel() {
-  var request = new XMLHttpRequest();
-
-  request.onreadystatechange = function () {
-    if (request.readyState == 4) {
-      var text = request.responseText;
-
-      var alertModal = document.getElementById("alertModal");
-      hm = new bootstrap.Modal(alertModal);
-
-      if (text == "1") {
-        document.getElementById("msg").innerHTML =
-          "  Please Log In or Sign Up !!!";
-        hm.show();
-      } else if (text == "2") {
-        document.getElementById("msg").innerHTML =
-          "  Please Update Your Profile First !!!";
-        hm.show();
-      } else if (text != 1 && text != 2) {
-        var paymentModal = document.getElementById("paymentModal");
-        pgm = new bootstrap.Modal(paymentModal);
-        pgm.show();
-      } else {
-        alert(text);
-      }
-    }
-  };
-
-  request.open("GET", "verifyToPayment.php", true);
   request.send();
 }
 
@@ -1391,7 +1320,7 @@ function deleteOne(id) {
     }
   };
 
-  request.open("GET", "deleteOneProcess.php?id=" + id, true);
+  request.open("GET", "./process/deleteOneProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1413,7 +1342,7 @@ function deleteAll() {
     }
   };
 
-  request.open("GET", "deleteAllProcess.php", true);
+  request.open("GET", "./process/deleteAllProcess.php", true);
   request.send();
 }
 
@@ -1463,7 +1392,7 @@ function start_chat() {
       }
     };
 
-    request.open("GET", "startChatProcess.php?name=" + name, true);
+    request.open("GET", "./process/startChatProcess.php?name=" + name, true);
     request.send();
   }
 }
@@ -1478,7 +1407,7 @@ function viewMessages(email) {
     }
   };
 
-  request.open("GET", "viewMsgProcess.php?e=" + email, true);
+  request.open("GET", "./process/viewMsgProcess.php?e=" + email, true);
   request.send();
 }
 
@@ -1497,11 +1426,10 @@ function send_msg() {
       var text = request.responseText;
       var object = JSON.parse(text);
       viewMessages(object.email);
-      // alert(object.email);
     }
   };
 
-  request.open("POST", "sendMsgProcess.php", true);
+  request.open("POST", "./process/sendMsgProcess.php", true);
   request.send(form);
 }
 
@@ -1526,7 +1454,7 @@ function deleteChat(email) {
     }
   };
 
-  request.open("POST", "deleteChat.php", true);
+  request.open("POST", "./process/deleteChat.php", true);
   request.send(form);
 }
 
@@ -1582,7 +1510,7 @@ function advancedSearch(x) {
     }
   };
 
-  request.open("POST", "advanceSearchProcess.php", true);
+  request.open("POST", "./process/advanceSearchProcess.php", true);
   request.send(form);
 }
 
@@ -1617,7 +1545,7 @@ function adminSignin() {
     }
   };
 
-  request.open("POST", "adminVerificationProcess.php", true);
+  request.open("POST", "./process/adminVerificationProcess.php", true);
   request.send(form);
 }
 
@@ -1639,7 +1567,11 @@ function verify() {
     }
   };
 
-  request.open("GET", "adminVerifyProcess.php?v=" + verification, true);
+  request.open(
+    "GET",
+    "./process/adminVerifyProcess.php?v=" + verification,
+    true
+  );
   request.send();
 }
 
@@ -1680,7 +1612,7 @@ function blockUser(email) {
       }
     }
   };
-  request.open("GET", "blockUserProcess.php?email=" + email, true);
+  request.open("GET", "./process/blockUserProcess.php?email=" + email, true);
   request.send();
 }
 
@@ -1696,7 +1628,7 @@ function blockProduct(id) {
       }
     }
   };
-  request.open("GET", "blockProductProcess.php?id=" + id, true);
+  request.open("GET", "./process/blockProductProcess.php?id=" + id, true);
   request.send();
 }
 
@@ -1715,7 +1647,11 @@ function addCategory() {
       }
     }
   };
-  request.open("GET", "addCategoryProcess.php?n=" + category_name, true);
+  request.open(
+    "GET",
+    "./process/addCategoryProcess.php?n=" + category_name,
+    true
+  );
   request.send();
 }
 
@@ -1734,7 +1670,7 @@ function addBrand() {
       }
     }
   };
-  request.open("GET", "addBrandProcess.php?n=" + brand_name, true);
+  request.open("GET", "./process/addBrandProcess.php?n=" + brand_name, true);
   request.send();
 }
 
@@ -1757,7 +1693,12 @@ function addModel() {
   };
   request.open(
     "GET",
-    "addModelProcess.php?m=" + model + "&b=" + brand + "&c=" + category,
+    "./process/addModelProcess.php?m=" +
+      model +
+      "&b=" +
+      brand +
+      "&c=" +
+      category,
     true
   );
   request.send();
@@ -1776,7 +1717,7 @@ function deleteCategory(c) {
       }
     }
   };
-  request.open("GET", "deleteCategory.php?c=" + c, true);
+  request.open("GET", "./process/deleteCategory.php?c=" + c, true);
   request.send();
 }
 
@@ -1793,7 +1734,7 @@ function deleteBrand(b) {
       }
     }
   };
-  request.open("GET", "deleteBrand.php?b=" + b, true);
+  request.open("GET", "./process/deleteBrand.php?b=" + b, true);
   request.send();
 }
 
@@ -1810,7 +1751,7 @@ function deleteModel(m) {
       }
     }
   };
-  request.open("GET", "deleteModel.php?m=" + m, true);
+  request.open("GET", "./process/deleteModel.php?m=" + m, true);
   request.send();
 }
 
@@ -1827,7 +1768,11 @@ function updateStatus(id, status) {
       }
     }
   };
-  request.open("GET", "updateStatus.php?id=" + id + "&s=" + status, true);
+  request.open(
+    "GET",
+    "./process/updateStatus.php?id=" + id + "&s=" + status,
+    true
+  );
   request.send();
 }
 
@@ -1846,7 +1791,12 @@ function findSellings(x) {
 
   request.open(
     "GET",
-    "findSellingsProcess.php?f=" + from + "&t=" + to + "&page_no=" + x,
+    "./process/findSellingsProcess.php?f=" +
+      from +
+      "&t=" +
+      to +
+      "&page_no=" +
+      x,
     true
   );
   request.send();
@@ -1862,7 +1812,7 @@ function viewUserMessages(email) {
     }
   };
 
-  request.open("GET", "viewUserMsgProcess.php?e=" + email, true);
+  request.open("GET", "./process/viewUserMsgProcess.php?e=" + email, true);
   request.send();
 }
 
@@ -1884,7 +1834,7 @@ function send_user_msg() {
     }
   };
 
-  request.open("POST", "sendUserMsgProcess.php", true);
+  request.open("POST", "./process/sendUserMsgProcess.php", true);
   request.send(form);
 }
 
@@ -1909,7 +1859,7 @@ function clearChat(email) {
     }
   };
 
-  request.open("POST", "clearChat.php", true);
+  request.open("POST", "./process/clearChat.php", true);
   request.send(form);
 }
 
@@ -1928,7 +1878,11 @@ function start_user_chat() {
       }
     };
 
-    request.open("GET", "startUserChatProcess.php?name=" + name, true);
+    request.open(
+      "GET",
+      "./process/startUserChatProcess.php?name=" + name,
+      true
+    );
     request.send();
   }
 }
@@ -1943,7 +1897,7 @@ function viewAdminMessages(email) {
     }
   };
 
-  request.open("GET", "viewAdminMsgProcess.php?e=" + email, true);
+  request.open("GET", "./process/viewAdminMsgProcess.php?e=" + email, true);
   request.send();
 }
 
@@ -1965,7 +1919,7 @@ function send_admin_msg() {
     }
   };
 
-  request.open("POST", "sendAdminMsgProcess.php", true);
+  request.open("POST", "./process/sendAdminMsgProcess.php", true);
   request.send(form);
 }
 
@@ -1984,7 +1938,11 @@ function start_admin_chat() {
       }
     };
 
-    request.open("GET", "startAdminChatProcess.php?name=" + name, true);
+    request.open(
+      "GET",
+      "./process/startAdminChatProcess.php?name=" + name,
+      true
+    );
     request.send();
   }
 }
@@ -2045,7 +2003,7 @@ function saveAdminImage() {
     }
   };
 
-  request.open("POST", "saveAdminProfileImageProcess.php", true);
+  request.open("POST", "./process/saveAdminProfileImageProcess.php", true);
   request.send(form);
 }
 
@@ -2079,7 +2037,7 @@ function deleteAdminProfileImage(email) {
     }
   };
 
-  request.open("POST", "deleteAdminProfileImageProcess.php", true);
+  request.open("POST", "./process/deleteAdminProfileImageProcess.php", true);
   request.send(form);
 }
 
@@ -2116,7 +2074,7 @@ function saveAdminDetails() {
     }
   };
 
-  request.open("POST", "saveAdminDetailsProcess.php", true);
+  request.open("POST", "./process/saveAdminDetailsProcess.php", true);
   request.send(form);
 }
 
@@ -2130,7 +2088,11 @@ function searchUser(x) {
       document.getElementById("table_loader").innerHTML = text;
     }
   };
-  request.open("GET", "searchUser.php?name=" + name + "&page_no=" + x, true);
+  request.open(
+    "GET",
+    "./process/searchUser.php?name=" + name + "&page_no=" + x,
+    true
+  );
   request.send();
 }
 
@@ -2146,8 +2108,173 @@ function searchProducts(x) {
   };
   request.open(
     "GET",
-    "searchProducts.php?title=" + title + "&page_no=" + x,
+    "./process/searchProducts.php?title=" + title + "&page_no=" + x,
     true
   );
   request.send();
+}
+
+function buyNow(id) {
+  const qty = document.getElementById("qty_input").value;
+  const req = new XMLHttpRequest();
+  req.onreadystatechange = () => {
+    if (req.readyState == 4 && req.status == 200) {
+      const res = req.responseText;
+      const obj = JSON.parse(res);
+
+      const mail = obj["mail"];
+      const amount = obj["amount"];
+
+      if (res == "1") {
+        alert("Please log in or sign up");
+        window.location = "index.php";
+      } else if (res == "2") {
+        alert("Please update your profile first");
+        window.location = "userProfile.php";
+      } else {
+        payhere.onCompleted = function onCompleted(orderId) {
+          saveInvoice(orderId, id, mail, amount, qty);
+
+          console.log("Payment completed. OrderID:" + orderId);
+        };
+
+        payhere.onDismissed = function onDismissed() {
+          console.log("Payment dismissed");
+        };
+
+        payhere.onError = function onError(error) {
+          console.log("Error:" + error);
+        };
+
+        var payment = {
+          sandbox: true,
+          merchant_id: obj["merchant_id"],
+          return_url: "http://localhost/digishop/sigleProductView.php?id=" + id, // Important
+          cancel_url: "http://localhost/digishop/sigleProductView.php?id=" + id, // Important
+          notify_url: "http://sample.com/notify",
+          order_id: obj["id"],
+          items: obj["item"],
+          amount: amount,
+          currency: "LKR",
+          hash: obj["hash"],
+          first_name: obj["fname"],
+          last_name: obj["lname"],
+          email: mail,
+          phone: obj["mobile"],
+          address: obj["address"],
+          city: obj["city"],
+          country: "Sri Lanka",
+          delivery_address: obj["address"],
+          delivery_city: obj["city"],
+          delivery_country: "Sri Lanka",
+          custom_1: "",
+          custom_2: "",
+        };
+
+        payhere.startPayment(payment);
+      }
+    }
+  };
+  req.open("GET", "./process/buyNowProcess.php?id=" + id + "&qty=" + qty, true);
+  req.send();
+}
+
+function saveInvoice(orderId, id, mail, amount, qty) {
+  const form = new FormData();
+  form.append("o", orderId);
+  form.append("i", id);
+  form.append("m", mail);
+  form.append("a", amount);
+  form.append("q", qty);
+
+  const req = new XMLHttpRequest();
+
+  req.onreadystatechange = () => {
+    if (req.readyState == 4) {
+      const res = req.responseText;
+      if (res == "1") {
+        window.location = "invoice.php?id=" + orderId;
+      } else {
+        alert(res);
+      }
+    }
+  };
+
+  req.open("POST", "./process/saveInvoice.php", true);
+  req.send(form);
+}
+
+function checkout() {
+  const req = new XMLHttpRequest();
+  req.onreadystatechange = () => {
+    if (req.readyState == 4 && req.status == 200) {
+      const res = req.responseText;
+      const obj = JSON.parse(res);
+
+      if (res == "1") {
+        alert("Please update your profile first");
+        window.location = "userProfile.php";
+      } else {
+        payhere.onCompleted = function onCompleted(orderId) {
+          saveInvoiceCheckout(orderId);
+
+          console.log("Payment completed. OrderID:" + orderId);
+        };
+
+        payhere.onDismissed = function onDismissed() {
+          console.log("Payment dismissed");
+        };
+
+        payhere.onError = function onError(error) {
+          console.log("Error:" + error);
+        };
+
+        var payment = {
+          sandbox: true,
+          merchant_id: obj["merchant_id"],
+          return_url: "http://localhost/digishop/cart.php",
+          cancel_url: "http://localhost/digishop/cart.php",
+          notify_url: "http://sample.com/notify",
+          order_id: obj["id"],
+          items: obj["item"],
+          amount: obj["amount"],
+          currency: "LKR",
+          hash: obj["hash"],
+          first_name: obj["fname"],
+          last_name: obj["lname"],
+          email: obj["mail"],
+          phone: obj["mobile"],
+          address: obj["address"],
+          city: obj["city"],
+          country: "Sri Lanka",
+          delivery_address: obj["address"],
+          delivery_city: obj["city"],
+          delivery_country: "Sri Lanka",
+          custom_1: "",
+          custom_2: "",
+        };
+
+        payhere.startPayment(payment);
+      }
+    }
+  };
+  req.open("GET", "./process/checkoutProcess.php", true);
+  req.send();
+}
+
+function saveInvoiceCheckout(orderId) {
+  const req = new XMLHttpRequest();
+  req.onreadystatechange = () => {
+    if (req.readyState == 4 && req.status == 200) {
+      const res = req.responseText;
+      if (res == "1") {
+        window.location = "invoice.php?id=" + orderId;
+      } else {
+        alert(res);
+      }
+    }
+  };
+  req.open("POST", "./process/saveCheckoutInvoice.php", true);
+  req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  req.send("orderId=" + orderId);
 }

@@ -20,15 +20,15 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row gy-3">
 
             <?php
 
-            require "connection.php";
-            include "header.php";
+            require "./connection.php";
+            include "./component/header.php";
 
             if (isset($_SESSION["user"])) {
 
@@ -379,7 +379,7 @@
                 header("location:home.php");
             }
 
-            include "footer.php";
+            include "./component/footer.php";
 
             ?>
 
@@ -387,7 +387,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

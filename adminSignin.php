@@ -28,7 +28,7 @@ if (!isset($_SESSION["admin"])) {
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="d-flex container-fluid vh-100 justify-content-center background background-signup">
         <div class="row align-content-center">
@@ -140,7 +140,7 @@ if (!isset($_SESSION["admin"])) {
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 
 </body>
 

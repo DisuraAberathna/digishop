@@ -16,7 +16,7 @@
 
     <?php
 
-    require "connection.php";
+    require "./connection.php";
 
     if (isset($_GET["id"])) {
 
@@ -40,12 +40,12 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row">
 
-            <?php include "header.php"; ?>
+            <?php include "./component/header.php"; ?>
 
             <div class="col-12 mt-0 singleProduct">
                 <div class="row">
@@ -126,20 +126,6 @@
 
                                     }
 
-                                    $average_rs = Database::search("SELECT AVG(`rate_count`) FROM `rating` WHERE `product_id`='" . $pid . "'");
-                                    $average_data = $average_rs->fetch_assoc();
-
-                                    $star_rs = Database::search("SELECT * FROM `rating` WHERE `product_id`='" . $pid . "'");
-                                    $star_num = $star_rs->num_rows;
-
-                                    $average = 0;
-
-                                    if ($star_num != 0) {
-
-                                        $avg = implode(" ", $average_data);
-                                        $average = number_format($avg);
-                                    }
-
                                     ?>
 
                                 </ul>
@@ -154,6 +140,23 @@
                                 </div>
                             </div>
 
+                            <?php
+
+                            $average_rs = Database::search("SELECT AVG(`rate_count`) FROM `rating` WHERE `product_id`='" . $pid . "'");
+                            $average_data = $average_rs->fetch_assoc();
+
+                            $star_rs = Database::search("SELECT * FROM `rating` WHERE `product_id`='" . $pid . "'");
+                            $star_num = $star_rs->num_rows;
+
+                            $average = 0;
+
+                            if ($star_num != 0) {
+
+                                $avg = implode(" ", $average_data);
+                                $average = number_format($avg);
+                            }
+
+                            ?>
                             <div class="col-12 col-lg-6 order-3 rounded-3 border border-dark border-1" style="background-color:  #F2F4F4;">
 
                                 <div class="row">
@@ -166,8 +169,8 @@
                                         </div>
 
                                         <div class="row border-bottom border-dark">
-                                            <div class="col-12 my-2">
-                                                <span class="badge">
+                                            <div class="col-10 my-2">
+                                                <span>
 
                                                     <?php
 
@@ -464,12 +467,8 @@
 
                                                                         ?>
 
-                                                                            <input class="d-none" type="text" value="<?php echo $product_data["title"]; ?>" id="title">
-                                                                            <input class="d-none" type="text" value="<?php echo $pid; ?>" id="id">
-                                                                            <input class="d-none" type="text" value="<?php echo $product_data["price"]; ?>" id="price">
-                                                                            <input class="d-none" type="text" value="<?php echo $delivery; ?>" id="deliveryFee">
                                                                             <div class="col-lg-4 col-12 d-grid">
-                                                                                <button class="btn btn-success rounded-5" onclick="openPaymentModel();"><i class="bi bi-cash-coin"></i> Buy Now</button>
+                                                                                <button class="btn btn-success rounded-5" onclick="buyNow(<?php echo $pid; ?>);"><i class="bi bi-cash-coin"></i> Buy Now</button>
                                                                             </div>
                                                                             <div class="col-lg-4 col-12 d-grid">
                                                                                 <button class="btn btn-warning rounded-5" onclick="addToCart(<?php echo $pid; ?>);"><i class="bi bi-cart-plus"></i> Add To Cart</button>
@@ -961,13 +960,14 @@
                     </div>
                 </div>
 
-                <?php include "footer.php"; ?>
+                <?php include "./component/footer.php"; ?>
 
             </div>
         </div>
 
-        <script src="bootstrap.bundle.js"></script>
+        <script src="./js/bootstrap.bundle.js"></script>
         <script src="script.js"></script>
+        <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
 
     <?php
 
@@ -1033,5 +1033,3 @@
 </body>
 
 </html>
-
-<script></script>

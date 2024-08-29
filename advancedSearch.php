@@ -20,15 +20,15 @@
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row">
 
             <?php
 
-            require "connection.php";
-            include "header.php";
+            require "./connection.php";
+            include "./component/header.php";
 
             ?>
 
@@ -286,13 +286,13 @@
                 </div>
             </div>
 
-            <?php include "footer.php"; ?>
+            <?php include "./component/footer.php"; ?>
 
         </div>
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

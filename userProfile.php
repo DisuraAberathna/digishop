@@ -26,12 +26,12 @@
 
             <?php
 
-            require "connection.php";
-            include "header.php";
+            require "./connection.php";
+            include "./component/header.php";
 
             if (isset($_SESSION["user"])) {
 
-                include "loader.php";
+                include "./component/loader.php";
 
                 $email = $_SESSION["user"]["email"];
 
@@ -581,14 +581,14 @@
                 header("Location:http://localhost/digishop/home.php");
             }
 
-            include "footer.php";
+            include "./component/footer.php";
 
             ?>
 
         </div>
     </div>
 
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "connection.php";
+require "./connection.php";
 
 if (isset($_SESSION["admin"])) {
 
@@ -51,7 +51,7 @@ if (isset($_SESSION["admin"])) {
             <!-- Content Start -->
             <div class="content">
 
-                <?php include "adminHeader.php" ?>
+                <?php include "./component/admin./component/header.php" ?>
 
                 <div class="container-fluid background background-1">
                     <div class="row">
@@ -286,7 +286,7 @@ if (isset($_SESSION["admin"])) {
                     </div>
                 </div>
 
-                <?php include "footer.php"; ?>
+                <?php include "./component/footer.php"; ?>
 
             </div>
             <!-- Content End -->

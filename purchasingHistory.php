@@ -25,8 +25,8 @@
 
             <?php
 
-            require "connection.php";
-            include "header.php";
+            require "./connection.php";
+            include "./component/header.php";
 
             if (isset($_SESSION["user"])) {
 
@@ -268,7 +268,7 @@
                 header("Location:http://localhost/digishop/index.php");
             }
 
-            include "footer.php";
+            include "./component/footer.php";
 
             ?>
 
@@ -276,7 +276,7 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 
 </body>
 

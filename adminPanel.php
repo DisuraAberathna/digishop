@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "connection.php";
+require "./connection.php";
 
 if (isset($_SESSION["admin"])) {
 
@@ -50,7 +50,7 @@ if (isset($_SESSION["admin"])) {
 
             <!-- Content Start -->
             <div class="content">
-                <?php include "adminHeader.php" ?>
+                <?php include "./component/adminheader.php" ?>
 
                 <!-- Sale & Revenue Start -->
                 <div class="container-fluid pt-4 px-4">
@@ -217,7 +217,7 @@ if (isset($_SESSION["admin"])) {
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6 col-xl-6 rounded pb-5 pb-lg-0" style="background-color:  #BBC1C1;">
-                            <?php include "clock.php"; ?>
+                            <?php include "./component/clock.php"; ?>
                         </div>
                     </div>
                 </div>
@@ -227,7 +227,7 @@ if (isset($_SESSION["admin"])) {
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="text-center rounded p-4" style="background-color:  #BBC1C1;">
-                                <?php include "chart.php"; ?>
+                                <?php include "./component/chart.php"; ?>
                             </div>
                         </div>
                     </div>
@@ -397,7 +397,7 @@ if (isset($_SESSION["admin"])) {
                 </div>
                 <!-- Recent Sales End -->
 
-                <?php include "footer.php"; ?>
+                <?php include "./component/footer.php"; ?>
 
             </div>
             <!-- Content End -->

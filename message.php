@@ -1,6 +1,6 @@
 <?php
 
-require "connection.php";
+require "./connection.php";
 
 ?>
 
@@ -25,14 +25,14 @@ require "connection.php";
 
 <body>
 
-    <?php include "loader.php"; ?>
+    <?php include "./component/loader.php"; ?>
 
     <div class="container-fluid background background-1">
         <div class="row">
 
             <?php
 
-            include "header.php";
+            include "./component/header.php";
 
             if (isset($_SESSION["user"])) {
 
@@ -231,14 +231,14 @@ require "connection.php";
                 header("Location:http://localhost/digishop/home.php");
             }
 
-            include "footer.php";
+            include "./component/footer.php";
 
             ?>
 
         </div>
     </div>
 
-    <script src="bootstrap.bundle.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 
 </body>
